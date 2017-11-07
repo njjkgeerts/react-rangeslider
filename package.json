@@ -1,7 +1,8 @@
 {
   "name": "react-rangeslider",
-  "version": "2.2.0",
-  "description": "A lightweight react component that acts as a HTML5 input range slider polyfill",
+  "version": "2.2.1",
+  "description":
+    "A lightweight react component that acts as a HTML5 input range slider polyfill",
   "main": "lib/index.js",
   "scripts": {
     "clean:lib": "del lib umd",
@@ -10,17 +11,25 @@
     "lint": "eslint src docs",
     "test": "npm run lint && jest",
     "coverage": "npm test -- --coverage",
-    "start": "cross-env NODE_ENV=development node -r babel-register docs/server.js",
+    "start":
+      "cross-env NODE_ENV=development node -r babel-register docs/server.js",
     "build:less": "lessc ./src/Rangeslider.less ./lib/index.css",
     "build:less:umd": "lessc ./src/Rangeslider.less ./umd/rangeslider.css",
-    "build:less:umd:min": "lessc --clean-css ./src/Rangeslider.less ./umd/rangeslider.min.css",
-    "build:lib": "cross-env NODE_ENV=production babel ./src --stage 0 -d ./lib  --ignore __tests__",
-    "build:umd": "cross-env NODE_ENV=production webpack ./src/index.js ./umd/rangeslider.js",
-    "build:min": "cross-env NODE_ENV=production webpack -p ./src/index.js ./umd/rangeslider.min.js",
-    "build:docs": "cross-env NODE_ENV=production webpack -p --config=docs/webpack.config.js",
-    "build": "npm run build:less && npm run build:lib && npm run build:umd && npm run build:min && npm run build:less:umd && npm run build:less:umd:min",
+    "build:less:umd:min":
+      "lessc --clean-css ./src/Rangeslider.less ./umd/rangeslider.min.css",
+    "build:lib":
+      "cross-env NODE_ENV=production babel ./src --stage 0 -d ./lib  --ignore __tests__",
+    "build:umd":
+      "cross-env NODE_ENV=production webpack ./src/index.js ./umd/rangeslider.js",
+    "build:min":
+      "cross-env NODE_ENV=production webpack -p ./src/index.js ./umd/rangeslider.min.js",
+    "build:docs":
+      "cross-env NODE_ENV=production webpack -p --config=docs/webpack.config.js",
+    "build":
+      "npm run build:less && npm run build:lib && npm run build:umd && npm run build:min && npm run build:less:umd && npm run build:less:umd:min",
     "prebuild": "npm run clean:lib && npm test",
-    "docs": "npm run clean:docs && npm run build:docs && cpy docs/favicon.ico public/",
+    "docs":
+      "npm run clean:docs && npm run build:docs && cpy docs/favicon.ico public/",
     "deploy": "npm run docs && gh-pages -d public",
     "postpublish": "git push origin master --follow-tags",
     "minor": "npm version minor && npm publish",
@@ -31,10 +40,7 @@
     "type": "git",
     "url": "https://github.com/whoisandy/react-rangeslider.git"
   },
-  "files": [
-    "lib",
-    "umd"
-  ],
+  "files": ["lib", "umd"],
   "keywords": [
     "rangeslider",
     "range-slider",
@@ -97,12 +103,12 @@
     "opn-cli": "^3.1.0",
     "prop-types": "^15.5.9",
     "raw-loader": "^0.5.1",
-    "react": "^15.3.1",
-    "react-addons-test-utils": "^15.3.1",
-    "react-dom": "^15.3.1",
+    "react": "^16.0.0",
+    "react-addons-test-utils": "^15.6.2",
+    "react-dom": "^16.0.0",
     "react-ga": "^2.2.0",
     "react-github-button": "^0.1.11",
-    "react-test-renderer": "^15.5.4",
+    "react-test-renderer": "^16.0.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.8",
     "webpack": "^1.13.0",
@@ -114,7 +120,7 @@
     "resize-observer-polyfill": "^1.4.2"
   },
   "peerDependencies": {
-    "react": "^0.14.0 || ^15.0.0"
+    "react": "^16.0.0"
   },
   "jest": {
     "moduleNameMapper": {
